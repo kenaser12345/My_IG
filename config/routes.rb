@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   get "/dashboard" => "accounts#index"
   resource :accounts, only: [:index]
-
+  resource :posts, only: [:show, :new, :create]
 end
