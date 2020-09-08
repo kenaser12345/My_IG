@@ -34,6 +34,9 @@ gem 'devise', '~> 4.2'
 gem 'pg', '~> 0.18.4'
 # foreman
 gem 'foreman', '~> 0.87.1'
+#upload image
+gem 'carrierwave', '~> 0.11.2'
+gem 'fog', '~> 2.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,6 +50,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # local Var
+  gem 'figaro', '~> 1.2'
 end
 
 group :test do
