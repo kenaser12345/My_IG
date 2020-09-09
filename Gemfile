@@ -36,7 +36,7 @@ gem 'pg', '~> 0.18.4'
 gem 'foreman', '~> 0.87.1'
 #upload image
 gem 'carrierwave', '~> 0.11.2'
-gem 'fog', '~> 2.2'
+gem 'fog-aws', '~> 3.6', '>= 3.6.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
