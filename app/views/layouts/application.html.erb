@@ -11,7 +11,12 @@
 
   <body>
     <%= render "shared/flash" %>
-    <%= render "shared/navbar" %>
+    <% if account_signed_in? %>
+      <%= render "shared/account_nav" %>
+    <% else %>
+      <%= render "shared/public_nav" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
