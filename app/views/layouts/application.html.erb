@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <div class="container">
     <%= render "shared/flash" %>
     <% if account_signed_in? %>
       <%= render "shared/account_nav" %>
@@ -18,5 +19,6 @@
     <% end %>
 
     <%= yield %>
+    </div>
   </body>
 </html>
