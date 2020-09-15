@@ -7,4 +7,8 @@ class Post < ApplicationRecord
   def set_active
     self.active = true
   end
+
+  def total_likes
+    0
+  end
 end
