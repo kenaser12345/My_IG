@@ -5,6 +5,7 @@ class Account < ApplicationRecord
          :recoverable, :rememberable, :validatable
   mount_uploader :image, ImageUploader
   has_many :posts
+  has_many :likes
 
   def full_name
     "#{first_name} #{last_name}"
