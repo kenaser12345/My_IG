@@ -1,14 +1,12 @@
 class LikesController < ApplicationController
-
   def save_like
-    @like = Like.new(post_id: params[:post_id], acount_id: current_account.id)
-    
+    @like = Like.new(post_id: params[:post_id], account_id: current_account.id)
     respond_to do |format|
       format.json{
         if @like.save
-          {success}
+          render(json: {message: "like"})
         else
-          {fail}
+          render(json: {message: "again"})
         end
       }
     end

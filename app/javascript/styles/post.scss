@@ -4,6 +4,20 @@
     background: #fff;
     padding: 15px;
     border: 1px solid #ddd;
+    .post-actions{
+      margin-bottom: 20px;
+      .icon {
+        margin-right: 10px;
+        color: #ddd;
+        cursor: pointer;
+      }
+      .icon:hover{
+        color: #999;
+      }
+      .active {
+        color: #555;
+      }
+    }
   }
 }
 
@@ -18,4 +32,6 @@
 .img{
   margin-right: 10px;
 }
+
+
 
