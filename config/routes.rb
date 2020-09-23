@@ -9,4 +9,10 @@ Rails.application.routes.draw do
 
   resource :accounts, only: [:index]
   resource :posts, only: [:show, :new, :create]
+  resource :likes do
+    collection do
+      post :like
+      post :dislike
+    end
+  end
 end

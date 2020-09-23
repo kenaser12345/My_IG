@@ -8,10 +8,11 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("styles")
-require("./post")
+
 
 import $ from 'jquery'
 window.$ = $
 
 import "bootstrap";
 import "@fortawesome/fontawesome-free/js/all"
+import 'controllers'
