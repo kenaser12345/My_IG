@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_090533) do
+ActiveRecord::Schema.define(version: 2020_09_29_144612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2020_09_16_090533) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
+    t.integer "total_likes_count"
+    t.integer "total_comments_count"
     t.index ["account_id"], name: "index_posts_on_account_id"
   end
 
