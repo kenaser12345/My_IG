@@ -1,19 +1,19 @@
 <div class="container">
     <div class="row">
       <div class="col-4">
-        <%= image_tag current_account.image.url, width: "200px", class: "img-circle" %>
+        <%= profile_picture(@account, 200) %>
       </div>
       <div class="col-8 text-left profile-container">
-        <h1><%= current_account.username %></h1>
-        <%= link_to "edit account", edit_account_registration_path, class: "btn btn-secondary" %>
+        <h1><%= @account.username %></h1>
+        <%= link_to "edit account", edit_account_registration_path, class: "btn btn-secondary" if can_edit_profile?(@account.id) %>
         <div class="profile-stats-group">
-          <div class="profile-stats"><%= current_account.posts.count %> posts</div>
-          <div class="profile-stats"><%= current_account.total_followers %> followers</div>
-          <div class="profile-stats"><%= current_account.total_following %> following</div>
+          <div class="profile-stats"><%= @account.posts.count %> posts</div>
+          <div class="profile-stats"><%= @account.total_followers %> followers</div>
+          <div class="profile-stats"><%= @account.total_following %> following</div>
         </div>
-        <p><%= current_account.full_name %></p>
-        <p><%= current_account.description %></p>
-        <p><%= link_to current_account.website if current_account.website.present? %></p>
+        <p><%= @account.full_name %></p>
+        <p><%= @account.description %></p>
+        <p><%= link_to @account.website if @account.website.present? %></p>
       </div>
       <div class="row">
         <div class="col-12">
