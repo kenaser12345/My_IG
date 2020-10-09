@@ -8,12 +8,14 @@ Rails.application.routes.draw do
   get "post/like/:post_id" => "likes#save_like", as: :like_post
   post "follow/account" => "accounts#follow_account", as: :follow_account
 
-  resource :accounts, only: [:index]
-  resource :posts, only: [:show, :new, :create]
-  resource :likes do
+  resources :accounts, only: [:index]
+  resources :posts, only: [:show, :new, :create]
+  resources :likes do
     collection do
       post :like
       post :dislike
     end
   end
+  resources :comments, only: [:create, :destroy]
+
 end
