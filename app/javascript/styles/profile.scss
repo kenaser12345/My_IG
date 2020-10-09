@@ -1,14 +1,24 @@
-
+body{
+  background: #fafafa !important;
+}
 
 .profile-container{
   margin-bottom: 20px;
-  .profile-stats-group {
+  .btn-custom{
+    background: transparent;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+  .btn-custom:hover{
+    background: #ddd;
+  }
+  .profile-stats-group{
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 360px;
-    .profile-stats {
+    .profile-stats{
       width: 120px;
     }   
   }
