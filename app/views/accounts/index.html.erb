@@ -12,7 +12,9 @@
           <div class="post-details" data-controller="like">
             <div class="post-actions" >
               <i class="fa fa-heart like-<%= post.id %> fa-2x post-like icon <%= "active" if liked_by_user?(post.id)%>" data-id=<%= post.id %> data-target="like.likebtn" data-action="click->like#like_or_not"></i>
-              <i class="fa fa-comment  fa-2x post-comment icon"></i>
+              <%= link_to post_path(post.id) do %>
+                <i class="fa fa-comment  fa-2x post-comment icon"></i>
+              <% end %>
             </div>
             <p data-target="like.like_count" id="post-<%= post.id %>-likes"><strong><%= post.total_likes %></strong><strong> likes</strong></p>
             <p><strong id="post-<%= post.id %>-comments"></strong><%= link_to post.account.username, profile_path(post.account.username), class: "text-dark" %></strong></p>
