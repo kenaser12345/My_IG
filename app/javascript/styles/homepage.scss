@@ -1,6 +1,11 @@
 .account-summary {
   text-align: left;
   margin-bottom: 20px;
+  display: flex;
+  .account_group{
+    display: flex;
+    width: 100%;
+  }
 }
 
 .follower-suggestions {

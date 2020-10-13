@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 account_img">
         <%= profile_picture(@account, 200) %>
       </div>
       <div class="col-8 text-left profile-container">
@@ -25,7 +25,7 @@
         <p><%= @account.description %></p>
         <p><%= link_to @account.website if @account.website.present? %></p>
       </div>
-      <div class="row">
+      <div class="row posts">
         <div class="col-12">
           <% @posts.each do |post| %>
           <div class="col-4">

@@ -37,11 +37,13 @@
     </div>
     <div class="col-4">
       <div class="account-summary">
-        <p>
+        <div class="account_group">
           <%= link_to image_tag(current_account.image.thumb.url, class:"img-circle"), profile_path(current_account.username) %>
-          <strong><%= current_account.username %></strong>
-        </p>
-        <p><%= current_account.full_name %></p>
+          <div class="col-6">
+            <strong><%= current_account.username %></strong>
+            <p><%= current_account.full_name %></p>
+          </div>
+        </div>
       </div>
       <div class="follower-suggestions">
         <%= link_to "View all", "#", class:"float-right text-dark" %>
