@@ -1,22 +1,25 @@
 .insta-post{
   margin-bottom: 15px;
-  .post-details{
-    background: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    .post-actions{
-      margin-bottom: 20px;
-      .icon {
-        margin-right: 10px;
-        color: #ddd;
-        cursor: pointer;
-      }
-      .icon:hover{
-        color: #999;
-      }
-      .active {
-        color: #555;
-      }
+}
+.post-details{
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  .post-actions{
+    margin-bottom: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 20px;
+    .icon {
+      margin-right: 10px;
+      color: #ddd;
+      cursor: pointer;
+    }
+    .icon:hover{
+      color: #999;
+    }
+    .active {
+      color: #555;
     }
   }
   .comment-box{
@@ -42,9 +45,12 @@
   border: 1px solid #ddd;
 }
 .img{
-
   width: 100%;
 }
 
+.comments-feed{
+  height: 200px;
+  overflow: scroll;
+}
 
 
