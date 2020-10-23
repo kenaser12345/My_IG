@@ -22,19 +22,24 @@
           </div>
         </div>
         <p><%= @account.full_name %></p>
-        <p><%= @account.description %></p>
+        <p><%= simple_format @account.description %></p>
         <p><%= link_to @account.website if @account.website.present? %></p>
       </div>
-      <div class="row posts">
-        <div class="col-12">
+      <div class="row profile-posts">
+
           <% @posts.each do |post| %>
           <div class="col-4">
-            <div class="insta-post">
-              <%= link_to image_tag(post.image.url, class: "img img-fluid"), post_path(post) %>
+            <div class="insta-post post-square" style="background: url(<%= post.image.url %>) no-repeat center top" >
+              <div class="post-stats">
+                <div class="inner">
+                  <%= post.total_likes_count %> likes
+                  <%= post.total_comments_count %> comments
+                </div>
+              </div>
             </div>
           </div>
           <% end %>
-        </div>
+
       </div>
     </div>
 </div>
