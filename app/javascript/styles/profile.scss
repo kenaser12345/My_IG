@@ -41,7 +41,17 @@ body{
   background: rgba(0,0,0,0.5);
   text-align: center;
   color: #fff;
+  display: none;
   .inner{
     padding-top: 45%;
   }
+}
+
+.insta-post:hover{
+  .post-stats{
+    display: block;
+  }
+}
+.m-l-15 {
+  margin-left: 15px;
 }

@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 2020_10_09_161615) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
-    t.integer "total_likes_count"
-    t.integer "total_comments_count"
+    t.integer "total_likes_count", default: 0
+    t.integer "total_comments_count", default: 0
     t.index ["account_id"], name: "index_posts_on_account_id"
   end
 
