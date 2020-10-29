@@ -29,10 +29,15 @@ body{
 }
 
 .post-square{
+  margin-bottom: 30px;
   width: 290px;
   height: 290px;
   overflow: hidden;
   background-size: cover !important;
+}
+
+.profile-posts{
+  margin-top: 100px;
 }
 
 .post-stats{
